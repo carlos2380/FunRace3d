@@ -6,10 +6,13 @@ public class Player : MonoBehaviour
 {
     public float speed;
     public float timeDeading;
+    public CtrlGame ctrlGame;
 
     private bool isRotation;
     private float speedRotation;
     private Rigidbody rigidbody;
+    private Vector3 positionStart;
+    private Quaternion rotationStart;
     private Vector3 positionCheckpoint;
     private Quaternion rotationCheckpoint;
     // Start is called before the first frame update
@@ -17,6 +20,8 @@ public class Player : MonoBehaviour
     {
         isRotation = false;
         rigidbody = GetComponent<Rigidbody>();
+        positionStart = transform.position;
+        rotationStart = transform.rotation;
         updateCheckpoint();
     }
 
@@ -39,6 +44,13 @@ public class Player : MonoBehaviour
         rotationCheckpoint = transform.rotation;
     }
 
+    public void restart()
+    {
+        positionCheckpoint = positionStart;
+        rotationCheckpoint = rotationStart;
+        checkpoint();
+    }
+
     public void checkpoint()
     {
         rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
@@ -51,7 +63,7 @@ public class Player : MonoBehaviour
     }
     public void win()
     {
-        Debug.Log("Win");
+        ctrlGame.win();
     }
 
     public void OnTriggerEnter(Collider other)
