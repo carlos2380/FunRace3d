@@ -49,6 +49,10 @@ public class Player : MonoBehaviour
         transform.position = positionCheckpoint;
         transform.rotation = rotationCheckpoint;
     }
+    public void win()
+    {
+        Debug.Log("Win");
+    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -64,7 +68,6 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.tag == "Enemy")
         {
-            Debug.Log("DEAAAAD");
             rigidbody.constraints = 0;
             rigidbody.useGravity = true;
             rigidbody.mass = 10;
@@ -74,6 +77,10 @@ public class Player : MonoBehaviour
         else if (other.gameObject.tag == "Checkpoint")
         {
             updateCheckpoint();
+        }
+        else if (other.gameObject.tag == "Finish")
+        {
+            win();
         }
 
     }

@@ -14,7 +14,10 @@ public class CtrlCamera : MonoBehaviour
         if (other.gameObject.tag == "Roulette")
         {
             animator.SetTrigger("Roulette");
+        }else if (other.gameObject.tag == "Finish")
+        {
+            animator.SetTrigger("End");
         }
-        
+
     }
 }
