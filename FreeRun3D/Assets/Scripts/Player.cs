@@ -17,8 +17,7 @@ public class Player : MonoBehaviour
     {
         isRotation = false;
         rigidbody = GetComponent<Rigidbody>();
-        positionCheckpoint = transform.position;
-        rotationCheckpoint = transform.rotation;
+        updateCheckpoint();
     }
 
     // Update is called once per frame
@@ -34,7 +33,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    void checkpoint()
+    public void updateCheckpoint()
+    {
+        positionCheckpoint = transform.position;
+        rotationCheckpoint = transform.rotation;
+    }
+
+    public void checkpoint()
     {
         rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
         rigidbody.useGravity = false;
@@ -66,12 +71,17 @@ public class Player : MonoBehaviour
             rigidbody.AddForce(rigidbody.velocity * 100f);
             StartCoroutine(deading());
         }
-
-        IEnumerator deading()
+        else if (other.gameObject.tag == "Checkpoint")
         {
-            yield return new WaitForSeconds(timeDeading);
-            checkpoint();
+            updateCheckpoint();
         }
+
+    }
+
+    IEnumerator deading()
+    {
+        yield return new WaitForSeconds(timeDeading);
+        checkpoint();
     }
 }
 

@@ -6,21 +6,8 @@ public class CtrlCamera : MonoBehaviour
 {
     public Camera cam;
     public Animator animator;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void prueba()
-    {
-
-    }
+    
 
     public void OnTriggerEnter(Collider other)
     {

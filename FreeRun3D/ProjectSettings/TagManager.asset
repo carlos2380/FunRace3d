@@ -8,6 +8,7 @@ TagManager:
   - StopRotation
   - Roulette
   - Enemy
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
