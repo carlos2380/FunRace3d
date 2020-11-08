@@ -6,6 +6,8 @@ TagManager:
   tags:
   - RotationPlayer
   - StopRotation
+  - Roulette
+  - Enemy
   layers:
   - Default
   - TransparentFX

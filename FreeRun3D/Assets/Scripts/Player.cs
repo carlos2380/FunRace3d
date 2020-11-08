@@ -20,12 +20,13 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            if (isRotation == true)
+            {
+                transform.Rotate(0, speedRotation * Time.deltaTime, 0);
+            }
         }
 
-        if (isRotation == true)
-        {
-            transform.Rotate(0, speedRotation * Time.deltaTime, 0);
-        }
+
     }
 
     public void OnTriggerEnter(Collider other)
