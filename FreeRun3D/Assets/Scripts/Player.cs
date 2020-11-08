@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || (Input.touchCount > 0) || Input.GetMouseButton(0))
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
             if (isRotation == true)
