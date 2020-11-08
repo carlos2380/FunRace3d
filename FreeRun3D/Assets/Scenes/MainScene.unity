@@ -189,7 +189,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2709449376733939089}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1150475551
+--- !u!136 &1150475555
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,7 +199,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5000001
+  m_Radius: 0.51
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
@@ -215,7 +215,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2709449376733939089}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1373895655
+--- !u!136 &1373895659
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,7 +225,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5000001
+  m_Radius: 0.51
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
@@ -486,6 +486,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709449375602677903, guid: 1c746e20a34a06d47b269a5cd199acfc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2709449375602677902, guid: 1c746e20a34a06d47b269a5cd199acfc,
         type: 3}
@@ -794,6 +799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060575268782478268, guid: 8be9fb42d66faa645911de040384ac9d,
+        type: 3}
+      propertyPath: timeDeading
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9060575268782478269, guid: 8be9fb42d66faa645911de040384ac9d,
         type: 3}
